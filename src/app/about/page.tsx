@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import { FC } from 'react';
-import { motion } from 'framer-motion';
+import { FC } from 'react'
+import { motion } from 'framer-motion'
 
 const AboutPage: FC = () => {
     return (
@@ -18,7 +18,7 @@ const AboutPage: FC = () => {
             </section>
 
             {/* Mission & Vision */}
-            <section className="py-24 bg-[#151515]">
+            <section className="py-24 bg-secondary">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                         <motion.div 
@@ -31,8 +31,6 @@ const AboutPage: FC = () => {
                         >
                             <motion.div 
                                 className="text-accent text-5xl mb-6"
-                                animate={{ rotate: [0, 10, -10, 0] }}
-                                transition={{ duration: 3, repeat: Infinity }}
                             >
                                 🎯
                             </motion.div>
@@ -51,8 +49,6 @@ const AboutPage: FC = () => {
                         >
                             <motion.div 
                                 className="text-accent text-5xl mb-6"
-                                animate={{ scale: [1, 1.2, 1] }}
-                                transition={{ duration: 2, repeat: Infinity }}
                             >
                                 🔥
                             </motion.div>
@@ -66,7 +62,7 @@ const AboutPage: FC = () => {
             </section>
 
             {/* Values */}
-            <section className="py-24 bg-[#0a0a0a]">
+            <section className="py-24 bg-primary">
                 <div className="container mx-auto px-4 md:px-6">
                     <h2 className="text-5xl font-black text-center mb-16 text-white">Core <span className="text-accent">Values</span></h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -78,7 +74,7 @@ const AboutPage: FC = () => {
                         ].map((value, index) => (
                             <motion.div 
                                 key={index} 
-                                className="group bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-8 rounded-xl shadow-lg shadow-black/50 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 text-center border border-[#2a2a2a]"
+                                className="group bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-8 rounded-xl shadow-lg shadow-black/50 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 text-center border border-secondary"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -104,7 +100,7 @@ const AboutPage: FC = () => {
                                 Acker Performance was founded by a group of athletes frustrated with the compromise between high-performance gear and accessible, clean supplements. We saw a gap in the market for a brand that refused to cut corners—a brand that was as serious about results as we were.
                             </p>
                             <p className="text-xl leading-relaxed text-gray-300">
-                                From humble beginnings prototyping fabrics in a small Johannesburg studio to partnering with leading nutritionists for our supplement line, every step of our journey has been guided by one principle: <span className="text-accent font-bold">if it doesn't improve performance, it doesn't make the cut.</span> Our roots are proudly South African, but our standards are global. We are here to equip you for your peak.
+                                From humble beginnings prototyping fabrics in a small Johannesburg studio to partnering with leading nutritionists for our supplement line, every step of our journey has been guided by one principle: <span className="text-accent font-bold">if it doesn&apos;t improve performance, it doesn&apos;t make the cut.</span> Our roots are proudly South African, but our standards are global. We are here to equip you for your peak.
                             </p>
                         </div>
                     </div>

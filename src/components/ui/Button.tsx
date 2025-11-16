@@ -1,36 +1,40 @@
-import { FC, ReactNode } from 'react';
+import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
+import { clsx } from 'clsx';
 
-interface ButtonProps {
-    children: ReactNode;
-    onClick?: () => void;
-    variant?: 'primary' | 'secondary' | 'outline';
-    size?: 'sm' | 'md' | 'lg';
-    className?: string;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  children: ReactNode;
+  className?: string;
 }
 
-const Button: FC<ButtonProps> = ({ children, onClick, variant = 'primary', size = 'md', className = '' }) => {
-    const baseStyle = "font-bold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-2xl uppercase tracking-wide";
-    
-    const variants = {
-        primary: "bg-accent text-white hover:bg-accent-dark shadow-accent/50",
-        secondary: "bg-white text-jet-black hover:bg-gray-100",
-        outline: "bg-transparent text-white border-2 border-accent hover:bg-accent"
-    };
-
-    const sizes = {
-        sm: "px-4 py-2 text-sm",
-        md: "px-6 py-3 text-base",
-        lg: "px-8 py-4 text-lg"
-    };
-
-    return (
-        <button 
-            onClick={onClick} 
-            className={`${baseStyle} ${variants[variant]} ${sizes[size]} ${className}`}
-        >
-            {children}
-        </button>
-    );
-}
-
-export default Button;
+export const Button: FC<ButtonProps> = ({
+  variant = 'primary',
+  size = 'md',
+  children,
+  className,
+  ...props
+}) => {
+  const baseStyles = 'font-bold uppercase tracking-wide transition-all duration-300 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed';
+  
+  const variants = {
+    primary: 'bg-accent text-white hover:opacity-90 shadow-lg hover:shadow-xl',
+    secondary: 'bg-secondary text-white hover:opacity-90',
+    outline: 'border-2 border-accent text-accent hover:bg-accent hover:text-white',
+  };
+  
+  const sizes = {
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
+  };
+  
+  return (
+    <button
+      className={clsx(baseStyles, variants[variant], sizes[size], className)}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};

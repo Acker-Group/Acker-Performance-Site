@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import Button from '../../components/ui/Button';
-import { FC } from 'react';
-import { motion } from 'framer-motion';
+import { Button } from '../../components/ui/Button'
+import { FC } from 'react'
+import { motion } from 'framer-motion'
 
 const ContactPage: FC = () => {
     return (
@@ -14,16 +14,16 @@ const ContactPage: FC = () => {
                 </div>
                 <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
                     <h1 className="text-5xl md:text-7xl font-black mb-6 animate-fade-in">Get In <span className="text-accent">Touch</span></h1>
-                    <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Have questions? We're here to help. Reach out anytime.</p>
+                    <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">Have questions? We&apos;re here to help. Reach out anytime.</p>
                 </div>
             </section>
 
-            <section className="py-24 bg-[#151515]">
+            <section className="py-24 bg-secondary">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                         {/* Contact Form */}
                         <motion.div 
-                            className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-10 rounded-2xl shadow-2xl shadow-black/50 border border-[#2a2a2a]"
+                            className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-10 rounded-2xl shadow-2xl shadow-black/50 border border-secondary"
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -39,7 +39,7 @@ const ContactPage: FC = () => {
                                         id="name" 
                                         name="name" 
                                         required
-                                        className="w-full p-4 border-2 border-[#2a2a2a] bg-[#0f0f0f] text-white rounded-lg focus:border-accent focus:outline-none transition-colors placeholder:text-gray-500" 
+                                        className="w-full p-4 border-2 border-secondary bg-primary text-white rounded-lg focus:border-accent focus:outline-none transition-colors placeholder:text-gray-500" 
                                         placeholder="Your full name"
                                     />
                                 </div>
@@ -50,7 +50,7 @@ const ContactPage: FC = () => {
                                         id="email" 
                                         name="email" 
                                         required
-                                        className="w-full p-4 border-2 border-[#2a2a2a] bg-[#0f0f0f] text-white rounded-lg focus:border-accent focus:outline-none transition-colors placeholder:text-gray-500" 
+                                        className="w-full p-4 border-2 border-secondary bg-primary text-white rounded-lg focus:border-accent focus:outline-none transition-colors placeholder:text-gray-500" 
                                         placeholder="your.email@example.com"
                                     />
                                 </div>
@@ -61,7 +61,7 @@ const ContactPage: FC = () => {
                                         name="message" 
                                         rows={6} 
                                         required
-                                        className="w-full p-4 border-2 border-[#2a2a2a] bg-[#0f0f0f] text-white rounded-lg focus:border-accent focus:outline-none transition-colors resize-none placeholder:text-gray-500" 
+                                        className="w-full p-4 border-2 border-secondary bg-primary text-white rounded-lg focus:border-accent focus:outline-none transition-colors resize-none placeholder:text-gray-500" 
                                         placeholder="Tell us how we can help..."
                                     ></textarea>
                                 </div>
@@ -103,7 +103,7 @@ const ContactPage: FC = () => {
                             </motion.div>
 
                             <motion.div 
-                                className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-10 rounded-2xl border border-[#2a2a2a]"
+                                className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-10 rounded-2xl border border-secondary"
                                 whileHover={{ scale: 1.02, y: -5 }}
                             >
                                 <h3 className="text-2xl font-black mb-6 text-white">Follow Our <span className="text-accent">Journey</span></h3>
@@ -116,7 +116,7 @@ const ContactPage: FC = () => {
                                         <a
                                             key={social.name}
                                             href="#"
-                                            className="flex-1 bg-[#0f0f0f] border-2 border-[#2a2a2a] hover:border-accent text-white hover:text-accent rounded-xl p-6 text-center font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                                            className="flex-1 bg-primary border-2 border-secondary hover:border-accent text-white hover:text-accent rounded-xl p-6 text-center font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg"
                                         >
                                             {social.icon}
                                         </a>

@@ -25,13 +25,13 @@ const ApparelPage: FC = () => {
             </section>
 
             {/* Products Grid */}
-            <section className="py-24 bg-[#151515]">
+            <section className="py-24 bg-secondary">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {apparel.map((item, index) => (
                             <motion.div 
                                 key={item.name} 
-                                className="group bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] rounded-2xl shadow-xl shadow-black/50 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 overflow-hidden border border-[#2a2a2a]"
+                                className="group bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] rounded-2xl shadow-xl shadow-black/50 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 overflow-hidden border border-secondary"
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -59,7 +59,7 @@ const ApparelPage: FC = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-[#0d0d0d] text-white text-center">
+            <section className="py-20 bg-primary text-white text-center">
                 <div className="container mx-auto px-4 md:px-6">
                     <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to <span className="text-accent">Upgrade</span>?</h2>
                     <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Contact us to learn more about our apparel line and find the perfect fit for your training.</p>

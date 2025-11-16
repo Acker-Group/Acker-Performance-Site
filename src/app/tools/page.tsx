@@ -238,7 +238,7 @@ const ToolsPage: FC = () => {
                             className={`px-8 py-4 rounded-xl font-bold text-lg transition-all ${
                                 activeTab === 'bmi' 
                                     ? 'bg-accent text-white shadow-lg shadow-accent/50' 
-                                    : 'bg-[#1a1a1a] text-gray-300 hover:bg-[#2a2a2a]'
+                                    : 'bg-secondary text-gray-300 hover:bg-card'
                             }`}
                         >
                             📊 BMI Calculator
@@ -250,7 +250,7 @@ const ToolsPage: FC = () => {
                             className={`px-8 py-4 rounded-xl font-bold text-lg transition-all ${
                                 activeTab === 'workout' 
                                     ? 'bg-accent text-white shadow-lg shadow-accent/50' 
-                                    : 'bg-[#1a1a1a] text-gray-300 hover:bg-[#2a2a2a]'
+                                    : 'bg-secondary text-gray-300 hover:bg-card'
                             }`}
                         >
                             💪 AI Workout Planner
@@ -262,7 +262,7 @@ const ToolsPage: FC = () => {
                             className={`px-8 py-4 rounded-xl font-bold text-lg transition-all ${
                                 activeTab === 'diet' 
                                     ? 'bg-accent text-white shadow-lg shadow-accent/50' 
-                                    : 'bg-[#1a1a1a] text-gray-300 hover:bg-[#2a2a2a]'
+                                    : 'bg-secondary text-gray-300 hover:bg-card'
                             }`}
                         >
                             🥗 AI Diet Planner
@@ -277,7 +277,7 @@ const ToolsPage: FC = () => {
                             transition={{ duration: 0.5 }}
                             className="max-w-2xl mx-auto"
                         >
-                            <div className="bg-[#1a1a1a] p-8 md:p-12 rounded-3xl shadow-2xl border border-[#2a2a2a]">
+                            <div className="bg-secondary p-8 md:p-12 rounded-3xl shadow-2xl border border-secondary">
                                 <h2 className="text-3xl font-black text-white mb-8">BMI Calculator</h2>
                                 
                                 <div className="space-y-6">
@@ -287,7 +287,7 @@ const ToolsPage: FC = () => {
                                             type="number"
                                             value={bmiData.weight}
                                             onChange={(e) => setBmiData({ ...bmiData, weight: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                             placeholder="e.g., 75"
                                         />
                                     </div>
@@ -298,7 +298,7 @@ const ToolsPage: FC = () => {
                                             type="number"
                                             value={bmiData.height}
                                             onChange={(e) => setBmiData({ ...bmiData, height: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                             placeholder="e.g., 175"
                                         />
                                     </div>
@@ -343,7 +343,7 @@ const ToolsPage: FC = () => {
                             transition={{ duration: 0.5 }}
                             className="max-w-4xl mx-auto"
                         >
-                            <div className="bg-[#1a1a1a] p-8 md:p-12 rounded-3xl shadow-2xl border border-[#2a2a2a]">
+                            <div className="bg-secondary p-8 md:p-12 rounded-3xl shadow-2xl border border-secondary">
                                 <h2 className="text-3xl font-black text-white mb-2">AI Workout Planner</h2>
                                 <p className="text-gray-400 mb-8">Get a personalized workout plan based on your goals and experience</p>
                                 
@@ -353,7 +353,7 @@ const ToolsPage: FC = () => {
                                         <select
                                             value={workoutInputs.goal}
                                             onChange={(e) => setWorkoutInputs({ ...workoutInputs, goal: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                         >
                                             <option value="">Select goal...</option>
                                             <option value="muscle-gain">Muscle Gain</option>
@@ -367,7 +367,7 @@ const ToolsPage: FC = () => {
                                         <select
                                             value={workoutInputs.experience}
                                             onChange={(e) => setWorkoutInputs({ ...workoutInputs, experience: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                         >
                                             <option value="">Select level...</option>
                                             <option value="beginner">Beginner</option>
@@ -381,7 +381,7 @@ const ToolsPage: FC = () => {
                                         <select
                                             value={workoutInputs.daysPerWeek}
                                             onChange={(e) => setWorkoutInputs({ ...workoutInputs, daysPerWeek: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                         >
                                             <option value="">Select days...</option>
                                             <option value="3">3 Days</option>
@@ -396,7 +396,7 @@ const ToolsPage: FC = () => {
                                         <select
                                             value={workoutInputs.equipment}
                                             onChange={(e) => setWorkoutInputs({ ...workoutInputs, equipment: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                         >
                                             <option value="">Select equipment...</option>
                                             <option value="full-gym">Full Gym</option>
@@ -420,7 +420,7 @@ const ToolsPage: FC = () => {
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="mt-8 p-8 bg-[#0f0f0f] rounded-2xl border border-accent/20"
+                                        className="mt-8 p-8 bg-primary rounded-2xl border border-accent/20"
                                     >
                                         <div className="prose prose-invert max-w-none">
                                             <div className="text-gray-300 whitespace-pre-line leading-relaxed">
@@ -441,7 +441,7 @@ const ToolsPage: FC = () => {
                             transition={{ duration: 0.5 }}
                             className="max-w-4xl mx-auto"
                         >
-                            <div className="bg-[#1a1a1a] p-8 md:p-12 rounded-3xl shadow-2xl border border-[#2a2a2a]">
+                            <div className="bg-secondary p-8 md:p-12 rounded-3xl shadow-2xl border border-secondary">
                                 <h2 className="text-3xl font-black text-white mb-2">AI Diet Planner</h2>
                                 <p className="text-gray-400 mb-8">Get a personalized nutrition plan tailored to your goals</p>
                                 
@@ -451,7 +451,7 @@ const ToolsPage: FC = () => {
                                         <select
                                             value={dietInputs.goal}
                                             onChange={(e) => setDietInputs({ ...dietInputs, goal: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                         >
                                             <option value="">Select goal...</option>
                                             <option value="lose">Lose Weight</option>
@@ -465,7 +465,7 @@ const ToolsPage: FC = () => {
                                         <select
                                             value={dietInputs.gender}
                                             onChange={(e) => setDietInputs({ ...dietInputs, gender: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                         >
                                             <option value="">Select gender...</option>
                                             <option value="male">Male</option>
@@ -479,7 +479,7 @@ const ToolsPage: FC = () => {
                                             type="number"
                                             value={dietInputs.weight}
                                             onChange={(e) => setDietInputs({ ...dietInputs, weight: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                             placeholder="e.g., 75"
                                         />
                                     </div>
@@ -490,7 +490,7 @@ const ToolsPage: FC = () => {
                                             type="number"
                                             value={dietInputs.height}
                                             onChange={(e) => setDietInputs({ ...dietInputs, height: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                             placeholder="e.g., 175"
                                         />
                                     </div>
@@ -501,7 +501,7 @@ const ToolsPage: FC = () => {
                                             type="number"
                                             value={dietInputs.age}
                                             onChange={(e) => setDietInputs({ ...dietInputs, age: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                             placeholder="e.g., 25"
                                         />
                                     </div>
@@ -511,7 +511,7 @@ const ToolsPage: FC = () => {
                                         <select
                                             value={dietInputs.activityLevel}
                                             onChange={(e) => setDietInputs({ ...dietInputs, activityLevel: e.target.value })}
-                                            className="w-full px-6 py-4 bg-[#0f0f0f] text-white rounded-xl border border-[#2a2a2a] focus:border-accent focus:outline-none transition-all"
+                                            className="w-full px-6 py-4 bg-primary text-white rounded-xl border border-secondary focus:border-accent focus:outline-none transition-all"
                                         >
                                             <option value="">Select activity level...</option>
                                             <option value="sedentary">Sedentary (Little/no exercise)</option>
@@ -537,7 +537,7 @@ const ToolsPage: FC = () => {
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        className="mt-8 p-8 bg-[#0f0f0f] rounded-2xl border border-accent/20"
+                                        className="mt-8 p-8 bg-primary rounded-2xl border border-accent/20"
                                     >
                                         <div className="prose prose-invert max-w-none">
                                             <div className="text-gray-300 whitespace-pre-line leading-relaxed">

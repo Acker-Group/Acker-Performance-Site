@@ -49,7 +49,7 @@ const SupplementsPage: FC = () => {
             </section>
 
             {/* Products Grid */}
-            <section className="py-24 bg-[#151515]">
+            <section className="py-24 bg-secondary">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                         {supplements.map((item, index) => (
@@ -75,7 +75,7 @@ const SupplementsPage: FC = () => {
                                     </div>
                                     <div className="flex flex-wrap gap-2">
                                         {item.benefits.map((benefit) => (
-                                            <span key={benefit} className="text-sm bg-[#2a2a2a] text-gray-300 px-4 py-2 rounded-lg font-semibold">
+                                            <span key={benefit} className="text-sm bg-card text-gray-300 px-4 py-2 rounded-lg font-semibold">
                                                 ✓ {benefit}
                                             </span>
                                         ))}
@@ -88,7 +88,7 @@ const SupplementsPage: FC = () => {
             </section>
 
             {/* Trust Section */}
-            <section className="py-20 bg-[#0a0a0a]">
+            <section className="py-20 bg-primary">
                 <div className="container mx-auto px-4 md:px-6 text-center">
                     <h2 className="text-4xl md:text-5xl font-black mb-12 text-white">Why Trust <span className="text-accent">Acker</span> Supplements?</h2>
                     <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -99,7 +99,7 @@ const SupplementsPage: FC = () => {
                         ].map((item, index) => (
                             <motion.div 
                                 key={index} 
-                                className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-8 rounded-xl shadow-lg shadow-black/50 hover:shadow-xl hover:shadow-accent/20 transition-all duration-300 border border-[#2a2a2a]"
+                                className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] p-8 rounded-xl shadow-lg shadow-black/50 hover:shadow-xl hover:shadow-accent/20 transition-all duration-300 border border-secondary"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}

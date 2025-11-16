@@ -1,48 +1,43 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-jet-black: #0A0A0A;
-  --color-accent: #ff0000;
-  --color-accent-dark: #cc0000;
+:root {
+  --accent: #EF4444;
+  --secondary: #1C1C1C;
+  --background: #0A0A0A;
+  --text: #FFFFFF;
+  --gray-50: #1F1F1F;
+  --gray-100: #2A2A2A;
+  --gray-900: #FFFFFF;
 }
 
 * {
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: white;
-  color: var(--color-jet-black);
   font-family: system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-.animate-slide-in {
-  animation: slideIn 0.6s ease-out;
-}
+/* Utility Classes */
+.bg-primary { background-color: var(--background); }
+.bg-secondary { background-color: var(--gray-50); }
+.bg-card { background-color: var(--gray-100); }
+.text-primary { color: var(--text); }
+.text-secondary { color: var(--gray-900); }
+.text-accent { color: var(--accent); }
+.bg-accent { background-color: var(--accent); }
+.border-accent { border-color: var(--accent); }
+.hover\:text-accent:hover { color: var(--accent); }
+.hover\:bg-accent:hover { background-color: var(--accent); }
